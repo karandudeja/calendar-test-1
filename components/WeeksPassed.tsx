@@ -29,17 +29,17 @@ function WeeksPassed() {
   return (
     <div>
         <div>
-            <div className="flex justify-between">
-                <p className="font-medium text-zinc-500">Week</p>
-                <p className="font-medium text-zinc-500">Weeks left</p>
+            <div className="flex justify-between font-medium text-zinc-500 dark:text-zinc-600">
+                <p>Week</p>
+                <p>Weeks left</p>
             </div>
             <div className="flex justify-between">
-                <p className="font-medium text-2xl ">{weekNumber} <span className="font-normal text-lg text-zinc-400">of {totalISOWeeks}</span></p>
+                <p className="font-medium text-2xl ">{weekNumber} <span className="font-normal text-sm text-zinc-400 dark:text-zinc-600">of {totalISOWeeks}</span></p>
                 <p className="font-bold text-2xl ">{weeksRemaining}</p>
             </div>
             <div className="flex justify-around mt-4">
                 {weeksVisArray.map((week, index) => (
-                    <div key={index} className={`flex items-center justify-center lg:h-9 w-0.75 rounded-sm ${week.passed ? 'bg-rose-100' : week.isCurrent ? 'lg:h-9 w-1.5 bg-rose-600' : 'bg-rose-800'}`}>
+                    <div key={index} className={`flex items-center justify-center lg:h-9 w-0.75 rounded-sm ${week.passed ? 'bg-rose-100 dark:bg-rose-300' : week.isCurrent ? 'lg:h-9 w-1.5 bg-rose-600 dark:bg-rose-700' : 'bg-rose-800 dark:bg-rose-900'}`}>
                     </div>
                 ))}
             </div>

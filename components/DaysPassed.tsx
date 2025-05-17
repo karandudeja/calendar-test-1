@@ -12,21 +12,21 @@ function DaysPassed(){
     
     return(
         <div>
-            <div className="flex justify-between">
-                <p className="font-medium text-zinc-500">Day</p>
-                <p className="font-medium text-zinc-500">Days left</p>
+            <div className="flex justify-between font-medium text-zinc-500 dark:text-zinc-600">
+                <p>Day</p>
+                <p>Days left</p>
             </div>
             <div className="flex justify-between">
-                <p className="font-medium text-2xl ">{daysPassed} <span className="font-normal text-lg text-zinc-400">of {daysThisYear}</span></p>
+                <p className="font-medium text-2xl ">{daysPassed} <span className="font-normal text-sm text-zinc-400 dark:text-zinc-600">of {daysThisYear}</span></p>
                 <p className="font-bold text-2xl ">{daysRemaining}</p>
             </div>
-            <div className="w-full h-3 xl:mt-2 rounded bg-zinc-100 flex">
-                <div className="h-full rounded-tl-full rounded-bl-full bg-rose-100" style={{width:`${percentPassed}%`}}></div>
-                <div className="h-full rounded-tr-full rounded-br-full bg-rose-800 border-0 border-l-3 border-rose-500" style={{width:`${percentRemaining}%`}}></div>
+            <div className="w-full h-3 xl:mt-2 rounded-full bg-zinc-100 flex">
+                <div className="h-full rounded-tl-full rounded-bl-full bg-rose-100 dark:bg-rose-300" style={{width:`${percentPassed}%`}}></div>
+                <div className="h-full rounded-tr-full rounded-br-full bg-rose-800 border-0 border-l-3 border-rose-500 dark:bg-rose-900" style={{width:`${percentRemaining}%`}}></div>
             </div>
-            <div className="flex justify-between xl:mt-2 text-xs text-zinc-400">
-                <p>Gone: {percentPassed}%</p>
-                <p className="text-zinc-500">Remains: {percentRemaining}%</p>
+            <div className="flex justify-between xl:mt-2 text-xs">
+                <p className="text-zinc-400 dark:text-zinc-700">Gone: {percentPassed}%</p>
+                <p className="text-zinc-500 dark:text-zinc-600">Remains: {percentRemaining}%</p>
             </div>
         </div>
     );

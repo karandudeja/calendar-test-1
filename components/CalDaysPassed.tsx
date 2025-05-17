@@ -127,7 +127,7 @@ const CalDaysPassed: React.FC<CalendarProps> = ({
   const calendarDays = generateCalendarDays();
 
   return (
-    <div className="w-full mx-auto bg-white rounded-sm overflow-hidden">
+    <div className="w-full mx-auto rounded-sm overflow-hidden">
       
       {/* Calendar Grid */}
       <div className="grid grid-cols-7 xl:gap-0.5 bg-zinc-100 dark:bg-zinc-900">
@@ -157,16 +157,16 @@ const CalDaysPassed: React.FC<CalendarProps> = ({
           let specialText = "";
 
           if (dayInfo.isBeforeToday && dayInfo.isCurrentMonth) {
-            specialBg = "bg-rose-100 dark:bg-zinc-700";
-            specialText = "text-rose-100 dark:text-zinc-700 text-xs";
+            specialBg = "bg-rose-100 dark:bg-rose-300";
+            specialText = "text-rose-100 dark:text-rose-300 text-xs";
           } else if (!dayInfo.isBeforeToday && dayInfo.isCurrentMonth) {
-            specialBg = "bg-rose-900 dark:bg-zinc-500";
-            specialText = "text-rose-900 dark:text-zinc-500 text-xs";
+            specialBg = "bg-rose-900";
+            specialText = "text-rose-900 text-xs";
           }
 
           if (dayInfo.isToday)
-            (specialBg = "bg-rose-600 dark:bg-yellow-500"),
-              (specialText = "text-blue-50 dark:text-blue-900");
+            (specialBg = "bg-rose-600 dark:bg-rose-600"),
+              (specialText = "text-blue-50 dark:text-rose-900");
           
           // Removed isDateSelected condition since selection is disabled
 
@@ -179,10 +179,10 @@ const CalDaysPassed: React.FC<CalendarProps> = ({
               // Removed onClick handler to disable selection
             >
               <div
-                className={`absolute top-1 right-1 w-2 h-1.5 flex items-center justify-center text-[4px]
+                className={`absolute top-1 right-1 w-1 h-1 flex items-center justify-center text-[4px]
           ${
             dayInfo.isToday
-              ? "bg-rose-600 text-white text-[6px] font-medium dark:bg-yellow-500 dark:text-yellow-500 rounded-full text-xs"
+              ? "bg-rose-600 text-white text-[6px] font-medium dark:bg-rose-600 dark:text-white rounded-full text-xs"
               : ""
           }
         `}

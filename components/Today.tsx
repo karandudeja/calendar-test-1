@@ -10,9 +10,9 @@ function Today() {
     
   return (
     <div className="">
-      <p className="lg:text-lg text-zinc-800">{dayName}</p>
-      <p className="text-4xl font-bold lg:text-6xl text-zinc-800">{date}</p>
-      <p className="w-full text-sm text-zinc-500 lg:text-lg">{monthName}, {yearName}</p>
+      <p className="lg:text-lg text-zinc-800 dark:text-zinc-400">{dayName}</p>
+      <p className="text-4xl font-bold lg:text-6xl text-zinc-800 dark:text-zinc-300">{date}</p>
+      <p className="w-full text-sm text-zinc-500 dark:text-zinc-600 lg:text-lg">{monthName} {yearName}</p>
     </div>
   );
 }

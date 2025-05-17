@@ -7,11 +7,6 @@ function InfoAbout() {
             creatorURL: "https://giphy.com/gifs/willkim-art-film-animation-h00IVlxNjPxdu"
         },
         {
-            creator: "GIF IT UP",
-            url : "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2F6Yzd2a2l3eXN4d2V5bzNhdmg5aDVpazhxdWJ3YXlpdzV1d2UzaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8sXM8Noz17e7E5QZ6W/giphy.gif",
-            creatorURL: "https://giphy.com/gifs/gifitup-seasons-gifitup2024-gifitup-2024-8sXM8Noz17e7E5QZ6W"
-        },
-        {
             creator: "Nino Paulito",
             url: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTNnMjU3M2toOHB0NnVkMG9sZ3A2dzhxZG52aXJneDFteXFtOXh2eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0BKANEFmmlYCWm1q/giphy.gif",
             creatorURL: "https://giphy.com/gifs/nino-paulito-lurk-melissa-choong-xT0BKANEFmmlYCWm1q"
@@ -34,12 +29,12 @@ function InfoAbout() {
     <div className="info-about xl:mt-36  w-full flex justify-center">
         
             <div className="flex items-center">
-                <div className="w-16 aspect-square overflow-hidden rounded-full">
+                <div className="w-16 aspect-square overflow-hidden rounded-full shadow-xl/18">
                     <img src={randomGifUrl} alt="Random GIF" className="w-full h-full rounded-lg" />
                 </div>
                 <div className="ml-6 flex flex-col">
-                    <p className="lg:text-lg">More on this experiment in the ABOUT section.</p>
-                    <p className="text-xs text-zinc-400 mt-2">Gif from <a href={randomGifCreatorURL} target="_blank">{randomGifCreator}</a></p>
+                    <p className="lg:text-lg">More on this digital thingy in the ABOUT section.</p>
+                    <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-2">Gif from <a href={randomGifCreatorURL} target="_blank">{randomGifCreator}</a></p>
                 </div>
         </div>
     </div>
