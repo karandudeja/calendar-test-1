@@ -2,6 +2,8 @@ import Image from "next/image";
 import Today from "../../components/Today";
 import CalDaysPassed from "../../components/CalDaysPassed";
 import WeeksPassed from "../../components/WeeksPassed";
+import DaysPassed from "../../components/DaysPassed";
+import InfoAbout from "../../components/InfoAbout";
 
 export default function Home() {
   return (
@@ -14,6 +16,12 @@ export default function Home() {
           <Today />
           <CalDaysPassed initialDate={new Date()} />
           <WeeksPassed />
+      </div>
+      <div className="xl:mt-12">
+        <DaysPassed />
+      </div>
+      <div>
+        <InfoAbout />
       </div>
     </div>
   );
