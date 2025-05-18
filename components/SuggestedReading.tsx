@@ -48,14 +48,15 @@ function SuggestedReading() {
         const options = {
             root: null, // viewport
             rootMargin: '0px',
-            threshold: 0.3 // when 30% of the section is visible
+            threshold: 0.75 // when 75% of the section is visible
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
+                // if (entry.isIntersecting) {
+                //     setIsVisible(true);
+                // }
+                setIsVisible(entry.isIntersecting);
             });
         }, options);
         

@@ -5,6 +5,8 @@ import WeeksPassed from "../../components/WeeksPassed";
 import DaysPassed from "../../components/DaysPassed";
 import InfoAbout from "../../components/InfoAbout";
 import SuggestedReading from "../../components/SuggestedReading";
+import OtherInfo from "../../components/OtherInfo";
+import FooterTest from "../../components/FooterTest";
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
       <div>
         <SuggestedReading />
       </div>
+      <OtherInfo />
+      <FooterTest />
     </div>
   );
 }
