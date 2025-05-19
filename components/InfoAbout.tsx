@@ -1,3 +1,7 @@
+"use client";
+
+import Link from "next/link";
+
 function InfoAbout() {
 
     const arrGifLinks = [
@@ -33,7 +37,7 @@ function InfoAbout() {
                     <img src={randomGifUrl} alt="Random GIF" className="w-full h-full rounded-lg" />
                 </div>
                 <div className="ml-6 flex flex-col">
-                    <p className="lg:text-lg">More on this digital thingy in the ABOUT section.</p>
+                    <p className="lg:text-lg">More on this digital thingy in the <Link href="/about" className="underline underline-offset-4">About</Link> page.</p>
                     <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-2">Gif from <a href={randomGifCreatorURL} target="_blank">{randomGifCreator}</a></p>
                 </div>
         </div>

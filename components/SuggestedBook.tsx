@@ -24,7 +24,7 @@ const SuggestedBook: React.FC<SuggestedBookProps> = ({
       href={url} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="flex flex-col min-w-[180px] p-2 max-w-xs rounded-md hover:shadow-md hover:bg-white transition-all cursor-pointer"
+      className="group flex flex-col min-w-[180px] p-2 max-w-xs rounded-md hover:shadow-md hover:bg-white dark:hover:bg-zinc-800 transition-all duration-300 cursor-pointer"
     >
       <div className="overflow-hidden">
         <img 
@@ -35,9 +35,9 @@ const SuggestedBook: React.FC<SuggestedBookProps> = ({
           `}
         />
       </div>
-      <p className="font-medium hover:underline">{title}</p>
-      <p className="text-sm text-zinc-600 mt-1">{author}</p>
-      <p className="font-medium text-sm mt-2 text-zinc-700">{description}</p>
+      <p className="font-medium duration-300">{title}</p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-500 mt-1">{author}</p>
+      <p className="font-medium text-sm mt-2 text-zinc-700 dark:text-zinc-400">{description}</p>
     </a>
   );
 };
