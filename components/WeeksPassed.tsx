@@ -29,12 +29,12 @@ function WeeksPassed() {
   return (
     <div>
         <div>
-            <div className="flex justify-between font-medium text-zinc-500 dark:text-zinc-600">
+            <div className="flex justify-between text-zinc-500 dark:text-zinc-600">
                 <p>Week</p>
                 <p>Weeks left</p>
             </div>
             <div className="flex justify-between">
-                <p className="font-medium text-2xl ">{weekNumber} <span className="font-normal text-sm text-zinc-400 dark:text-zinc-600">of {totalISOWeeks}</span></p>
+                <p className="font-normal text-2xl ">{weekNumber} <span className="font-normal text-sm text-zinc-400 dark:text-zinc-600">of {totalISOWeeks}</span></p>
                 <p className="font-bold text-2xl ">{weeksRemaining}</p>
             </div>
             <div className="flex justify-around mt-4">

@@ -12,12 +12,12 @@ function DaysPassed(){
     
     return(
         <div>
-            <div className="flex justify-between font-medium text-zinc-500 dark:text-zinc-600">
+            <div className="flex justify-between text-zinc-500 dark:text-zinc-600">
                 <p>Day</p>
                 <p>Days left</p>
             </div>
             <div className="flex justify-between">
-                <p className="font-medium text-2xl ">{daysPassed} <span className="font-normal text-sm text-zinc-400 dark:text-zinc-600">of {daysThisYear}</span></p>
+                <p className="font-normal text-2xl ">{daysPassed} <span className="font-normal text-sm text-zinc-400 dark:text-zinc-600">of {daysThisYear}</span></p>
                 <p className="font-bold text-2xl ">{daysRemaining}</p>
             </div>
             <div className="w-full h-3 xl:mt-2 rounded-full bg-zinc-100 flex">
