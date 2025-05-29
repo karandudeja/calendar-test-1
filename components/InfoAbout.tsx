@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from 'react';
 
-function InfoAbout() {
+// Define the type for your gif objects
+type GifLink = {
+    creator: string;
+    url: string;
+    creatorURL: string;
+};
 
-    const arrGifLinks = [
+const arrGifLinks = [
         {
             creator: "Will Kim",
             url: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHhndnN1eWppdTc4cjZ1MzNuMzNmcm1mb2lobGlvMGx0aTd3azhnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h00IVlxNjPxdu/giphy.gif",
@@ -22,23 +28,43 @@ function InfoAbout() {
         }
     ];
 
-    const randomIndex = Math.floor(Math.random() * arrGifLinks.length);
-    const randomGif = arrGifLinks[randomIndex];
-    const randomGifUrl = randomGif.url;
-    const randomGifCreator = randomGif.creator;
-    const randomGifCreatorURL = randomGif.creatorURL;
+function InfoAbout() {
+
+    const [randomGif, setRandomGif] = useState<GifLink | null>(null);
+
+    useEffect(() => {
+        const randomIndex = Math.floor(Math.random() * arrGifLinks.length);
+        setRandomGif(arrGifLinks[randomIndex]);
+    }, []);
+
+    // Show a placeholder or the first item while loading
+    if (!randomGif) {
+        return (
+            <div className="info-about xl:mt-36 w-full flex justify-center">
+                <div className="flex items-center">
+                    <div className="w-16 aspect-square overflow-hidden rounded-full shadow-xl/18 bg-gray-200 animate-pulse">
+                        {/* Loading placeholder */}
+                    </div>
+                    <div className="ml-6 flex flex-col">
+                        <p className="lg:text-lg">More on this digital thingy in the <Link href="/about" className="underline underline-offset-4">About</Link> page.</p>
+                        <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-2">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
   
     return (
-    
-    <div className="info-about xl:mt-36  w-full flex justify-center">
+
+    <div className="info-about xl:mt-36  w-full flex justify-center cursor-default">
         
             <div className="flex items-center">
                 <div className="w-16 aspect-square overflow-hidden rounded-full shadow-xl/18">
-                    <img src={randomGifUrl} alt="Random GIF" className="w-full h-full rounded-lg" />
+                    <img src={randomGif.url} alt="Random GIF" className="w-full h-full rounded-lg" />
                 </div>
                 <div className="ml-6 flex flex-col">
                     <p className="lg:text-lg">More on this digital thingy in the <Link href="/about" className="underline underline-offset-4">About</Link> page.</p>
-                    <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-2">Gif from <a href={randomGifCreatorURL} target="_blank">{randomGifCreator}</a></p>
+                    <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-2">Gif from <a href={randomGif.creatorURL} target="_blank">{randomGif.creator}</a></p>
                 </div>
         </div>
     </div>

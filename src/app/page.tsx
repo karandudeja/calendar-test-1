@@ -15,7 +15,7 @@ export default function Home() {
         <p className="lg:mb-8 text-center font-bold">YoLo</p>
         {/* <div className="mt-6 mb-20 h-px w-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent"></div> */}
       </div>
-      <div className="bg-white dark:bg-zinc-950 px-8 py-16 rounded">
+      <div className="bg-white dark:bg-[#000000] px-8 py-16 rounded cursor-none">
         <div className="grid lg:grid-cols-[1fr_1fr] xl:grid-cols-[1fr_1fr_2fr] xl:gap-20">
           <Today />
           <CalDaysPassed initialDate={new Date()} />
