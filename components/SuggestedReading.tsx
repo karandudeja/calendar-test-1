@@ -73,7 +73,7 @@ function SuggestedReading() {
 
     return (
         <div className="mt-32" ref={sectionRef}>
-            <div className="w-full h-0.25 bg-zinc-300 dark:bg-zinc-800"></div>
+            <div className="w-full h-0.25 bg-zinc-800 dark:bg-zinc-200"></div>
             <p className="font-semibold my-8">Suggested Reading</p>
             <div className="flex gap-16 overflow-x-auto pb-4">
                 {arrBooks.map((book, index) => (

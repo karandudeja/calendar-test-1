@@ -24,3 +24,36 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* Define the rotation animation */
+@keyframes rotateFull {
+    /* 1. Start at original position (0deg) and hold */
+    0% {
+        transform: rotate(0deg);
+    }
+    42% { /* Hold 0deg until 2.5s mark (2.5 / 6 = 0.41666) */
+        transform: rotate(0deg);
+    }
+
+    /* 2. Rotate to -180deg (takes 0.5s) */
+    50% { /* Reaches -180deg at 3.0s mark (3.0 / 6 = 0.5) */
+        transform: rotate(-180deg);
+    }
+
+    /* 3. Hold at -180deg */
+    92% { /* Hold -180deg until 5.5s mark (5.5 / 6 = 0.91666) */
+        transform: rotate(-180deg);
+    }
+
+    /* 4. Rotate back to 0deg (takes 0.5s) */
+    100% { /* Reaches 0deg at 6.0s mark (6.0 / 6 = 1.0) */
+        transform: rotate(0deg);
+    }
+}
+
+/* Apply the animation as a utility class */
+.animate-rotate-infinite {
+    animation: rotateFull 4s ease-in-out infinite; /* 0.5s for 500ms rotation */
+    transform-origin: center; /* Ensure it rotates around its own center */
+}

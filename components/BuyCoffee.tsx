@@ -16,7 +16,7 @@ function BuyCoffee(){
                 <p className="ml-3 text-2xl font-bold">Support this app</p>
             </div>
             <p className="mt-8">Any contribution is welcome!</p>
-            <p className="">Anything works!</p>
+            <p className="">Thanks.</p>
             <button className="bg-zinc-900 text-white px-4 py-2 mt-8 rounded">Buy me a Coffee</button>    
         </div>
     );

@@ -4,7 +4,7 @@ function GiveFeedback(){
     return (
         <div className="xl:w-1/2">
             <div className="flex items-center">
-                <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center">
+                <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center animate-rotate-infinite">
                     <Image
                     src="/like-white.svg"
                     alt="Feedback Illustration"
@@ -15,8 +15,8 @@ function GiveFeedback(){
                 </div>
                 <p className="ml-3 text-2xl font-bold">Give Feedback</p>
             </div>
-            <p className="mt-8">Your feedback improves it for others!</p>
-            <p className="">Please let us know, how this thing can be improved for you.</p>
+            <p className="mt-8">Your feedback makes stuff better!</p>
+            <p className="">Let us know, how can this thing be improved for you.</p>
             <button className="bg-zinc-900 text-white px-4 py-2 mt-8 rounded">Go to Feedback</button>
         </div>
     );
