@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function GiveFeedback(){
     return (
-        <div className="xl:w-1/2">
+        <div className="lg:w-1/2">
             <div className="flex items-center">
                 <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center animate-rotate-infinite">
                     <Image

@@ -54,6 +54,6 @@ body {
 
 /* Apply the animation as a utility class */
 .animate-rotate-infinite {
-    animation: rotateFull 4s ease-in-out infinite; /* 0.5s for 500ms rotation */
+    animation: rotateFull 3s ease-in-out infinite; /* 0.5s for 500ms rotation */
     transform-origin: center; /* Ensure it rotates around its own center */
 }

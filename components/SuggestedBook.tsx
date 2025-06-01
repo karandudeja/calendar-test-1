@@ -38,9 +38,8 @@ const SuggestedBook: React.FC<SuggestedBookProps> = ({
       <div className="lg:px-4">
         <p className="font-semibold duration-300">{title}</p>
         <p className="text-sm text-zinc-600 dark:text-zinc-500 mt-1">{author}</p>
-        <p className="font-medium text-sm mt-2 text-zinc-700 dark:text-zinc-400">{description}</p>
+        <p className="font-medium text-sm mt-3 text-zinc-700 dark:text-zinc-400">{description}</p>
       </div>
-      
     </a>
   );
 };
