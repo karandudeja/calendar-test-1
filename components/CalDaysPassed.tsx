@@ -130,7 +130,7 @@ const CalDaysPassed: React.FC<CalendarProps> = ({
     <div className="w-full mx-auto rounded-sm overflow-hidden">
       
       {/* Calendar Grid */}
-      <div className="grid grid-cols-7 xl:gap-0.5 bg-zinc-100 dark:bg-zinc-900">
+      <div className="grid grid-cols-7 gap-0.5 bg-zinc-100 dark:bg-zinc-900">
         {/* Day headers */}
         {dayNames.map((day) => (
           <div

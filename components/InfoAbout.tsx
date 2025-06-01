@@ -40,7 +40,7 @@ function InfoAbout() {
     // Show a placeholder or the first item while loading
     if (!randomGif) {
         return (
-            <div className="info-about xl:mt-36 w-full flex justify-center">
+            <div className="info-about w-full flex justify-center">
                 <div className="flex items-center">
                     <div className="w-16 aspect-square overflow-hidden rounded-full shadow-xl/18 bg-gray-200 animate-pulse">
                         {/* Loading placeholder */}
@@ -56,15 +56,14 @@ function InfoAbout() {
   
     return (
 
-    <div className="info-about xl:mt-36  w-full flex justify-center cursor-default">
-        
+    <div className="info-about w-full flex justify-center cursor-default">
             <div className="flex items-center">
                 <div className="w-16 aspect-square overflow-hidden rounded-full shadow-xl/18">
                     <img src={randomGif.url} alt="Random GIF" className="w-full h-full rounded-lg" />
                 </div>
                 <div className="ml-6 flex flex-col">
-                    <p className="lg:text-lg">More on this digital thingy in the <Link href="/about" className="underline underline-offset-4">About</Link> page.</p>
-                    <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-2">Gif from <a href={randomGif.creatorURL} target="_blank">{randomGif.creator}</a></p>
+                    <p className="lg:text-lg dark:text-zinc-300">More on this digital thingy in the <Link href="/about" className="underline underline-offset-4">About</Link> page.</p>
+                    <p className="text-xs text-zinc-400 dark:text-zinc-700 mt-2">Gif from <a href={randomGif.creatorURL} target="_blank">{randomGif.creator}</a></p>
                 </div>
         </div>
     </div>
