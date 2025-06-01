@@ -4,6 +4,7 @@ import SuggestedBook from "./SuggestedBook";
 
 function SuggestedReading() {
     const [isVisible, setIsVisible] = useState(false);
+    const [suggReadCount, setSuggReadCount] = useState(0);
     const sectionRef = useRef<HTMLDivElement>(null);
     
     const arrBooks = [
@@ -51,6 +52,8 @@ function SuggestedReading() {
             threshold: 0.75 // when 75% of the section is visible
         };
 
+        setSuggReadCount(arrBooks.length);
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 // if (entry.isIntersecting) {
@@ -71,10 +74,13 @@ function SuggestedReading() {
         };
     }, []);
 
+    
+
     return (
         <div className="" ref={sectionRef}>
             <div className="w-full h-0.25 bg-zinc-800 dark:bg-zinc-200"></div>
-            <p className="font-semibold my-8">Suggested Reading</p>
+            <p className="font-semibold mt-8 mb-1">Suggested Reading</p>
+            <p className="font-normal text-sm text-zinc-400 dark:text-zinc-600 mb-8">{suggReadCount} books</p>
             <div className="flex gap-12 md:gap-14 lg:gap-16 overflow-x-auto">
                 {arrBooks.map((book, index) => (
                     <SuggestedBook
