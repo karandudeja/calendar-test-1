@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
 
 function BuyCoffee(){
     return (
@@ -17,7 +18,9 @@ function BuyCoffee(){
             </div>
             <p className="mt-8">Small contributions, big impact!</p>
             <p className="">Your support means a lot.</p>
-            <button className="bg-zinc-900 text-white px-4 py-2 mt-8 rounded">Buy me a Coffee</button>    
+            <div className="mt-8">
+                <Button>Buy me a Coffee</Button>
+            </div>   
         </div>
     );
 }

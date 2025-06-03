@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
 
 function GiveFeedback(){
     return (
         <div className="lg:w-1/2">
             <div className="flex items-center">
-                <div className="w-7 h-7 rounded-full bg-black flex items-center justify-center animate-rotate-infinite">
+                <div className="w-7 h-7 rounded-full bg-black dark:bg-zinc-300 flex items-center justify-center animate-rotate-infinite">
                     <Image
                     src="/like-white.svg"
                     alt="Feedback Illustration"
@@ -16,8 +17,10 @@ function GiveFeedback(){
                 <p className="ml-3 text-2xl font-bold">Give Feedback</p>
             </div>
             <p className="mt-8">Your feedback makes stuff better!</p>
-            <p className="">Let us know, how can this thing be improved for you.</p>
-            <button className="bg-zinc-900 text-white px-4 py-2 mt-8 rounded">Go to Feedback</button>
+            <p className="">Let me know, how can this thing be improved for you.</p>
+            <div className="mt-8">
+                <Button>Go to Feedback</Button>
+            </div>
         </div>
     );
 }
