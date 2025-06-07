@@ -24,7 +24,7 @@ const SuggestedBook: React.FC<SuggestedBookProps> = ({
       href={url} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="group flex flex-col lg:flex-row flex-shrink-0 w-[110px] md:w-[180px] lg:w-[300px] md:p-2  rounded-md hover:shadow-md hover:bg-white dark:hover:bg-zinc-800 transition-all duration-300 cursor-pointer"
+      className="group flex flex-col lg:flex-row flex-shrink-0 w-[110px] lg:w-[300px] lg:p-2 rounded-md hover:shadow-md hover:bg-white dark:hover:bg-zinc-700 transition-all duration-200 cursor-pointer"
     >
       <div className="overflow-hidden">
         <img 

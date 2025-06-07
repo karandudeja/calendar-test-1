@@ -78,9 +78,9 @@ function SuggestedReading() {
 
     return (
         <div className="" ref={sectionRef}>
-            <div className="w-full h-0.25 bg-zinc-800 dark:bg-zinc-300"></div>
-            <p className="font-semibold mt-8 mb-1">Suggested Reading</p>
-            <p className="font-normal text-sm text-zinc-400 dark:text-zinc-600 mb-8">{suggReadCount} books</p>
+            <div className="w-full h-0.25 bg-zinc-800 dark:bg-zinc-400"></div>
+            <p className="font-semibold mt-8 mb-1 cursor-default">Suggested Reading</p>
+            <p className="font-normal text-sm text-zinc-400 dark:text-zinc-600 mb-8 cursor-default">{suggReadCount} books</p>
             <div className="flex gap-12 md:gap-14 lg:gap-16 overflow-x-auto">
                 {arrBooks.map((book, index) => (
                     <SuggestedBook

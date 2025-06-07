@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Today from "../../components/Today";
 import CalDaysPassed from "../../components/CalDaysPassed";
 import WeeksPassed from "../../components/WeeksPassed";
@@ -15,7 +14,7 @@ export default function Home() {
         <p className="mb-4 md:mb-6 lg:mb-8 text-center font-bold">YoLo</p>
         {/* <div className="mt-6 mb-20 h-px w-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent"></div> */}
       </div>
-      <div className="bg-white dark:bg-[#000000] px-8 py-16 rounded cursor-none">
+      <div className="bg-white dark:bg-black px-8 py-16 rounded cursor-none">
         <div className="grid grid-cols-[1fr_1fr] xl:grid-cols-[1fr_1fr_2fr] gap-4 xl:gap-20">
           <div className="col-start-1">
             <Today />
@@ -27,7 +26,6 @@ export default function Home() {
             <WeeksPassed />
           </div>
         </div>
-  
         <div className="mt-16 xl:mt-12">
           <DaysPassed />
         </div>
